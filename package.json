@@ -69,7 +69,7 @@
         "preconditions": "^1.0.8",
         "shelljs": "^0.3.0",
         "sjcl": "^1.0.2",
-        "idanode-common": "git+https://github.com/idanode/idanode-common.git#wallet",
+        "idanode-common": "git+https://github.com/idanode/idanode-common.git",
         "unzip": "git+https://github.com/idanode/unzip.git",
         "zip": "git+https://github.com/xJeneKx/zip.git"
     },
