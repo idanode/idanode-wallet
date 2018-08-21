@@ -1,0 +1,130 @@
+<style type="text/css">
+	p.selectP{
+		font-size:14px;
+		color: #333;
+		margin-bottom:8px;
+	}
+	p.marginL{
+		/*margin-left:10px;*/
+		/*text-indent: 2em;*/
+	}
+	p.nomarignB{
+		margin-bottom:0;
+	}
+	i.selectI{
+		position: absolute;
+		right:15px;
+		top:40%;
+		color: #a2a2a2;
+	}
+	i.selectII{
+		position: absolute;
+		right:15px;
+		top:34%;
+		color: #a2a2a2;
+	}
+	div.Seavatar{
+		background: #0095ff;
+		color: #fff;
+		border-radius: 50%;
+		width: 45px;
+		height: 45px;
+		line-height: 45px;
+		text-align: center;
+		font-size: 20px;
+		font-weight: bold;
+		float: left;
+	}
+	div.SeName{
+		float: left;
+		height: 45px;
+		line-height: 45px;
+		margin-left: 10px;
+		font-size: 16px;
+		font-weight: bold;
+		color: #333;
+	}
+	div.SeNameMN{
+		float: right;
+		margin-right: 35px;
+		height: 45px;
+		line-height: 45px;
+		font-size: 16px;
+		font-weight: bold;
+		color: #333;
+	}
+	span.colorred{
+		color: red;
+	}
+	span.colorgreen{
+		color: #0095ff;
+	}
+	li.backfff{
+		background: #fff;
+		position: relative;
+	}
+	li.backfffPlus{
+		margin-top: 10px;
+		background: #fff;
+		position: relative;
+	}
+	li.isChoosen{
+		background: #ececec;
+	}
+</style>
+
+<nav class="tab-bar">
+	<section class="left-small">
+		<a ng-click="cancel()" class="p10">
+			<span class="text-close" translate>Close</span>
+		</a>
+	</section>
+
+	<section class="middle tab-bar-section">
+		<h1 class="title ellipsis" >
+			<span class="size-17 colorfff" translate> Select subwallet </span>
+		</h1>
+	</section>
+</nav>
+
+
+<div class="modal-content fix-modals-touch" style="background: #f5f5f5;">
+	<ul class="no-bullet subwallets">
+		<li class="backfff" ng-class='{"isChoosen":!indexCtl.shared_address}'>
+			<a ng-click="selectSubwallet()" class="db oh">
+				<div class="Seavatar">{{(indexCtl.alias || indexCtl.walletName) | limitTo: 1}}</div>
+				<div class="SeName">{{(indexCtl.alias || indexCtl.walletName)}}</div>
+				<div class="SeNameMN">
+					<span ng-if="asset == 'base' || asset == indexCtl.BLACKBYTES_ASSET">{{mainWalletBalanceInfo.totalStr}}</span>
+					<span ng-if="asset != 'base' && asset != indexCtl.BLACKBYTES_ASSET">{{mainWalletBalanceInfo.total.toLocaleString()}}</span>
+				</div>
+			</a>
+			<i class="icon-arrow-right3 size-24 selectII"></i>
+		</li>
+
+		<li class="backfffPlus" ng-repeat="sw in arrSharedWallets" ng-class="{'isChoosen': sw.shared_address == indexCtl.shared_address}">
+			<a ng-click="selectSubwallet(sw.shared_address)" class="db oh">
+				<p class="selectP" translate> Shared_address: </p>
+				<p class="selectP marginL">{{sw.shared_address}}</p>
+				<p class="selectP">
+					<span translate> Amount </span>:
+					<span ng-if="asset == 'base' || asset == indexCtl.BLACKBYTES_ASSET">{{sw.totalStr}}</span>
+					<span ng-if="asset != 'base' && asset != indexCtl.BLACKBYTES_ASSET">{{sw.total.toLocaleString()}}</span>
+				</p>
+				<p class="selectP">
+					<span translate> Created:  </span>
+					<time>{{ sw.creation_ts * 1000 | amDateFormat:'YYYY/MM/DD HH:mm'}}</time>
+				</p>
+				<p class="selectP nomarignB">
+					<span translate>Finality</span>：
+					<span class="colorred" translate ng-if="!sw.is_unlock">Locked</span>
+					<span class="colorgreen" translate ng-if="sw.is_unlock">Unlocked</span>
+				</p>
+			</a>
+			<i class="icon-arrow-right3 size-24 selectI"></i>
+		</li>
+	</ul>
+</div>
+
+		<!--<time>{{ sw.creation_ts * 1000 | amDateFormat:'MM/DD/YYYY HH:mm a'}}</time>-->
+		<!--<time>({{ sw.creation_ts * 1000 | amTimeAgo}})</time>-->

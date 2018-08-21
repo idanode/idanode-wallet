@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=IdaNode
+Comment=Make payment fun
+Exec=bash -c 'cd $(dirname %k) && ./IdaNode %u'
+Icon=icon-white-256.png
+Terminal=false
+Categories=Office;Finance;
+MimeType=x-scheme-handler/idanode;
+X-Ubuntu-Touch=true
+X-Ubuntu-StageHint=SideStage
