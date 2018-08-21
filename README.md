@@ -69,7 +69,7 @@ cd idanode-wallet
 # ./idanode-wallet
 # if you get a fatal error on g++ lib, then install the package:
 # sudo apt-get install g++-multilib
-
+# if you are building for 32-bit target, then --target_arch=ia32
 bower install
 npm install
 npm rebuild sqlite3 --build-from-source --runtime=node-webkit --target_arch=x64 --target=0.26.6
