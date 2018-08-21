@@ -67,6 +67,8 @@ cd idanode-wallet
 
 ```sh
 # ./idanode-wallet
+# if you get a fatal error on g++ lib, then install the package:
+# sudo apt-get install g++-multilib
 
 bower install
 npm install
