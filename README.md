@@ -110,7 +110,7 @@ The release package will be generated under ../idanodebuilds
 
 - `make osx64`
 
-##### Windows
+##### Windows (may need to specify NWJS location in makefile)
 
 - `make win64`
 
