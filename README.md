@@ -41,8 +41,8 @@ We provide executable programs for multiple platforms. You can either start usin
 **Option 1:**
 
 - Open PowerShell by using administrator privileges, run `npm install --global --production windows-build-tools`
-- Set environment variable `GYP_MSVS_VERSION = 2017`
-- `npm config set msvs_version 2017`
+- Set environment variable `GYP_MSVS_VERSION = 2015`
+- `npm config set msvs_version 2015`
 
 Please refer to [windows-build-tools](https://github.com/felixrieseberg/windows-build-tools)
 
@@ -52,7 +52,7 @@ Please refer to [windows-build-tools](https://github.com/felixrieseberg/windows-
 - Install [Visual Studio 2017](https://visualstudio.microsoft.com/zh-hans/thank-you-downloading-visual-studio/?sku=Community&rel=15)，with VC++ 2015 (v140) tools.
 - Install [Python 2.7.14](https://www.python.org/downloads/release/python-2714/)
 - Set environment variable, add the Python insall directory to `PATH`.
-- Set environment variable `GYP_MSVS_VERSION = 2017`
+- Set environment variable `GYP_MSVS_VERSION = 2015`
 - `npm config set msvs_version 2017`
 
 
