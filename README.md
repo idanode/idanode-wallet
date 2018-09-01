@@ -128,9 +128,9 @@ Once the user starts to use IdaNode Wallet, cache files will be generated in the
 * Windows: `%LOCALAPPDATA%\DND`
 
 ## File you may be interested in
-.\idanode-wallet\src\js\controllers\walletHome.js (line 1372)
-.\idanode-wallet\src\js\services\configService.js (line 75)
-.\idanode-wallet\public\idanode.js (line 2668, 2670, 18540)
+*.\idanode-wallet\src\js\controllers\walletHome.js (line 1372)
+*.\idanode-wallet\src\js\services\configService.js (line 75)
+*.\idanode-wallet\public\idanode.js (line 2668, 2670, 18540)
 
 ## Issues and Questions
 
