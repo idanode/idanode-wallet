@@ -77,7 +77,7 @@ grunt
 ```
 
 #### Execute
-
+Full path of nwjs
 ```sh
 # ./idanode-wallet
 ./nwjs/nwjs .
