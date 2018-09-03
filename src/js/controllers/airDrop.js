@@ -267,7 +267,7 @@ angular.module('copayApp.controllers').controller('airDrop', function ($scope, $
 				merkle_proof = form.merkle_proof.$modelValue.trim();
 
 			if (asset === "base"){
-				var asset_name = "MN";
+				var asset_name = "DND";
 				amount *= unitValue;
 				amount = Math.round(amount);
 			}
@@ -449,7 +449,7 @@ angular.module('copayApp.controllers').controller('airDrop', function ($scope, $
 						else if (err.match(/one of the cosigners refused to sign/))
 							err = gettextCatalog.getString('one of the cosigners refused to sign');
 						else if (err.match(/funds from/))
-							err = err.substring(err.indexOf("from") + 4, err.indexOf("for")) + gettextCatalog.getString(err.substr(0, err.indexOf("from"))) + gettextCatalog.getString(". It needs atleast ") + parseInt(err.substring(err.indexOf("for") + 3, err.length)) / 1000000 + "MN";
+							err = err.substring(err.indexOf("from") + 4, err.indexOf("for")) + gettextCatalog.getString(err.substr(0, err.indexOf("from"))) + gettextCatalog.getString(". It needs at least ") + parseInt(err.substring(err.indexOf("for") + 3, err.length))/1000000 + "DND";
 						else if (err == "close") {
 							err = "suspend transaction.";
 						}

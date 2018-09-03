@@ -896,7 +896,7 @@ angular.module('copayApp.controllers').controller('walletHomeController', functi
 					}
 
 					self.sendtoaddress = opts.to_address;
-					self.sendamount = opts.amount/1000000 + "MN";
+					self.sendamount = opts.amount/1000000 + "DND";
 
 					var eventListeners = eventBus.listenerCount('apiTowalletHome');
 
@@ -977,12 +977,12 @@ angular.module('copayApp.controllers').controller('walletHomeController', functi
 							else if (err.match(/one of the cosigners refused to sign/))
 								err = gettextCatalog.getString('one of the cosigners refused to sign') ;
 							else if (err.match(/funds from/))
-								err = err.substring(err.indexOf("from")+4, err.indexOf("for")) + gettextCatalog.getString(err.substr(0,err.indexOf("from"))) + gettextCatalog.getString(". It needs atleast ")  + parseInt(err.substring(err.indexOf("for")+3, err.length))/1000000 + "MN";
+								err = err.substring(err.indexOf("from")+4, err.indexOf("for")) + gettextCatalog.getString(err.substr(0,err.indexOf("from"))) + gettextCatalog.getString(". It needs at least ")  + parseInt(err.substring(err.indexOf("for")+3, err.length))/1000000 + "DND";
 							else if(err == "close") {
 								err = "suspend transaction.";
 							}
 							else if(err.match(/notes to pay fees/))
-								err = gettextCatalog.getString('No notes to pay fees') ;
+								err = gettextCatalog.getString('No DNDs to pay fees') ;
 							else if(err.match(/authentifier verification failed/))
 								err = gettextCatalog.getString('authentifier verification failed');
 							// 如果是 观察钱包
@@ -1369,7 +1369,8 @@ angular.module('copayApp.controllers').controller('walletHomeController', functi
 				// var url = 'https://'+testnet+'explorer.idanode.org/#'+btx.unit;
 				// var url = 'http://'+testnet+'211.159.160.220:88/#'+btx.unit;
 				//var url = 'https://' + testnet + 'explorer.idanode.org/#' + btx.unit;
-                var url = '192.168.1.127:8080/#' + btx.unit;
+                //var url = '192.168.1.127:8080/#' + btx.unit;
+                var url = '52.15.163.180:8080/#' + btx.unit;
 				if (typeof nw !== 'undefined')
 					nw.Shell.openExternal(url);
 				else if (isCordova)
@@ -1554,7 +1555,7 @@ angular.module('copayApp.controllers').controller('walletHomeController', functi
 						db.query("CREATE TABLE IF NOT EXISTS tcode (\n\
 									wallet CHAR(44) NOT NULL,\n\
 									asset CHAR(44) NOT NULL DEFAULT base,\n\
-									asset_name CHAR(44) NOT NULL DEFAULT MN,\n\
+									asset_name CHAR(44) NOT NULL DEFAULT DND,\n\
 									num CHAR(16) NOT NULL,\n\
 									code CHAR(16) NOT NULL,\n\
 									address CHAR(32),\n\
@@ -1569,7 +1570,7 @@ angular.module('copayApp.controllers').controller('walletHomeController', functi
 						db.addQuery(arrQueries, "CREATE TABLE tcode (\n\
 									wallet CHAR(44) NOT NULL,\n\
 									asset CHAR(44) NOT NULL DEFAULT base,\n\
-									asset_name CHAR(44) NOT NULL DEFAULT MN,\n\
+									asset_name CHAR(44) NOT NULL DEFAULT DND,\n\
 									num CHAR(16) NOT NULL,\n\
 									code CHAR(16) NOT NULL,\n\
 									address CHAR(32),\n\

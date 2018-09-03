@@ -278,12 +278,12 @@ angular.module('copayApp.controllers').controller('sendAssets', function ($scope
 						else if (err.match(/one of the cosigners refused to sign/))
 							err = gettextCatalog.getString('one of the cosigners refused to sign');
 						else if (err.match(/funds from/))
-							err = err.substring(err.indexOf("from") + 4, err.indexOf("for")) + gettextCatalog.getString(err.substr(0, err.indexOf("from"))) + gettextCatalog.getString(". It needs atleast ") + parseInt(err.substring(err.indexOf("for") + 3, err.length)) / 1000000 + "MN";
+							err = err.substring(err.indexOf("from") + 4, err.indexOf("for")) + gettextCatalog.getString(err.substr(0, err.indexOf("from"))) + gettextCatalog.getString(". It needs at least ") + parseInt(err.substring(err.indexOf("for") + 3, err.length)) / 1000000 + "DND";
 						else if (err == "close") {
 							err = "suspend transaction.";
 						}
 						else if(err.match(/notes to pay fees/))
-							err = gettextCatalog.getString('No notes to pay fees') ;
+							err = gettextCatalog.getString('No DNDs to pay fees') ;
 						else if(err.match(/authentifier verification failed/))
 							err = gettextCatalog.getString('authentifier verification failed');
 						self.showSending = 0;

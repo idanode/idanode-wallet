@@ -1517,7 +1517,7 @@ angular.module('copayApp.controllers').controller('indexController', function ($
 					if (it.action == 'moved')
 						_note += ' Moved:' + it.amount
 
-					dataString = formatDate(it.time * 1000) + ',' + formatString(it.addressTo) + ',' + _note + ',' + _amount / 1000000 + ',MN,,,,';
+					dataString = formatDate(it.time * 1000) + ',' + formatString(it.addressTo) + ',' + _note + ',' + _amount / 1000000  + ',DND,,,,';
 					csvContent += dataString + "\n";
 
 				});

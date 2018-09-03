@@ -38,7 +38,7 @@ angular.module('copayApp.controllers').controller('preferencesUnitController', f
 		 }
 		 , */{
 			name: 'bytes',
-			shortName: 'notes',
+			shortName: 'DND',
 			value: 1,
 			decimals: 0,
 			code: 'one',
