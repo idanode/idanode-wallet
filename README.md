@@ -142,6 +142,10 @@ Once the user starts to use IdaNode Wallet, cache files will be generated in the
 * .\idanode-wallet\src\js\services\configService.js (line 75)
 * .\idanode-wallet\public\idanode.js (line 2668, 2670, 18540)
 
+if you are running wallet for testnet, make sure to change WS_PROTOCOL to "ws" in file idanode-wallet/node_modules/idanode-common/conf.js
+
+[line 44:] exports.WS_PROTOCOL = "ws://"
+
 ## Issues and Questions
 
 * [GitHub Issues](https://github.com/idanode/idanode-wallet/issues)
