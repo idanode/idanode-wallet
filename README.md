@@ -76,6 +76,13 @@ npm rebuild sqlite3 --build-from-source --runtime=node-webkit --target_arch=x64 
 grunt
 ```
 
+if you encounter an error while building sqlite3 like:
+gyp ERR! clean error
+gyp ERR! stack Error: EACCES: permission denied, rmdir 'build'
+
+Then, you can apply below work around to your home folder:
+sudo chown -R $USER /home/ubuntu
+
 #### Execute
 Full path of nwjs
 ```sh
