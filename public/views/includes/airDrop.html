@@ -151,7 +151,7 @@
 					>
 					<span class="placeholder" translate>Amount each</span>
 					<a style="line-height: 45px;height: 45px;padding-right: 12px;" class="postfix" ng-if="index.arrBalances.length > 0 && index.arrBalances[index.assetIndex].asset === 'base'">
-						MN
+						DND
 					</a>
 					<a style="line-height: 45px;height: 45px;padding-right: 12px;" class="postfix" ng-if="index.arrBalances.length > 0 && index.arrBalances[index.assetIndex].asset !== 'base' && index.arrBalances[index.assetIndex].asset !== index.BLACKBYTES_ASSET">
 						{{index.arrBalances[index.assetIndex].symbol.substr(0,4)}}
@@ -177,7 +177,7 @@
 					<span translate>Total amount</span>
 					<span ng-model="airD.candyTotalCount" style="font-size: 21px">{{(airD.redPacketCount * airD.candyAmount).toFixed(4)}}</span>
 					<span ng-if="index.arrBalances.length > 0 && index.arrBalances[index.assetIndex].asset !== 'base' ">{{index.arrBalances[index.assetIndex].symbol.substr(0,4)}}</span>
-					<span ng-if="index.arrBalances.length > 0 && index.arrBalances[index.assetIndex].asset === 'base' "> MN </span>
+					<span ng-if="index.arrBalances.length > 0 && index.arrBalances[index.assetIndex].asset === 'base' "> DND </span>
 					<span class="amount-pop" ng-if="!airD.submitAble" translate>Youe balance is not enough</span>
 				</p>
 			</div>
