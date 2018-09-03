@@ -1690,7 +1690,7 @@ msgstr "请您确定使用本软件是您自己的决定并遵守所有适用的
 msgid "You are responsible for safekeeping your passwords, private key pairs, PINs and any other codes you use to access the software."
 msgstr "您有责任妥善保管您的登录口令、私钥、交易密码和您用以访问本软件的其它代码。"
 
-msgid "<b>IF YOU LOSE ACCESS TO YOUR TRUSTNOTE WALLET, YOU ACKNOWLEDGE AND AGREE THAT ANY NOTES OR OTHER VALUABLES YOU HAVE ASSOCIATED WITH THAT TRUSTNOTE WALLET WILL BECOME INACCESSIBLE.</b>"
+msgid "<b>IF YOU LOSE ACCESS TO YOUR IDANODE WALLET, YOU ACKNOWLEDGE AND AGREE THAT ANY NOTES OR OTHER VALUABLES YOU HAVE ASSOCIATED WITH THAT IDANODE WALLET WILL BECOME INACCESSIBLE.</b>"
 msgstr "<b>若您失去对本钱包的控制权，您知悉并接受任何与本钱包关联的DND和其它有价资产将无法找回。</b>"
 
 msgid "All transaction requests are irreversible."
@@ -1936,7 +1936,7 @@ msgstr "需要有足够的notes"
 msgid "authentifier verification failed"
 msgstr "未认证成功"
 
-msgid ". It needs atleast "
+msgid ". It needs at least "
 msgstr "。这需要至少"
 
 msgid "[internal] connection closed"

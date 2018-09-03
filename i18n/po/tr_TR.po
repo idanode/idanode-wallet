@@ -1399,8 +1399,8 @@ msgid "WARNINGS:"
 msgstr "UYARILAR:"
 
 #: public/views/splash.html:53
-msgid "WELCOME TO TRUSTNOTE"
-msgstr "TRUSTNOTE'A HOŞGELDİNİZ"
+msgid "WELCOME TO IDANODE"
+msgstr "IDANODE'A HOŞGELDİNİZ"
 
 #: public/views/copayers.html:24
 msgid "Waiting for co-signers"

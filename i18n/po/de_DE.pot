@@ -1398,8 +1398,8 @@ msgid "WARNINGS:"
 msgstr "WARNUNGEN:"
 
 #: public/views/splash.html:53
-msgid "WELCOME TO TRUSTNOTE"
-msgstr "WILLKOMMEN ZU TRUSTNOTE"
+msgid "WELCOME TO IDANODE"
+msgstr "WILLKOMMEN ZU IDANODE"
 
 #: public/views/copayers.html:24
 msgid "Verschlüsselungskennwort"

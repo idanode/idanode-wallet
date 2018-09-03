@@ -1395,7 +1395,7 @@ msgid "WARNINGS:"
 msgstr ""
 
 #: public/views/splash.html:53
-msgid "WELCOME TO TRUSTNOTE"
+msgid "WELCOME TO IDANODE"
 msgstr ""
 
 #: public/views/copayers.html:24
