@@ -84,6 +84,8 @@ Then, you can apply below work around to your home folder:
 sudo chown -R $USER /home/ubuntu
 
 #### Execute
+After first run, you'll likely encounter runtime error complaining about node_sqlite3.node not being found, copy the file from the neighboring directory to where the program tries to find it, and run again (e.g. from idanode-wallet/node_modules/sqlite3/lib/binding/node-v47-darwin-x64 to idanode-wallet/node_modules/sqlite3/lib/binding/node-webkit-v0.14.7-darwin-x64). If that didn't work, copy node_sqlite3.node from node_modules folder, which is got installed with installer file from Byteball.org website.
+
 Full path of nwjs
 ```sh
 # ./idanode-wallet
