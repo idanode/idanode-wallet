@@ -121,6 +121,8 @@ http://dl-ssl.google.com/android/repository/tools_r25.2.5-windows.zip
 
 and extract to android_sdk_folder/ (should replace ./tools folder).
 
+You can install Gradle from the following link: https://gradle.org/install/
+
 ##### iOS
 
 - Install Xcode 9 (or higher version)
