@@ -111,6 +111,16 @@ Install Android SDK (from Android Studio)
 
 - Run `make android`
 
+In case of could not find gradle wrapper within android sdk error, download Android SDK tools package v25:
+
+http://dl-ssl.google.com/android/repository/tools_r25.2.5-macosx.zip
+
+http://dl-ssl.google.com/android/repository/tools_r25.2.5-linux.zip
+
+http://dl-ssl.google.com/android/repository/tools_r25.2.5-windows.zip
+
+and extract to android_sdk_folder/ (should replace ./tools folder).
+
 ##### iOS
 
 - Install Xcode 9 (or higher version)
