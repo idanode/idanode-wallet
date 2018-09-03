@@ -15,11 +15,11 @@ angular.module('copayApp.services').factory('txFormatService', function (profile
 		return profileService.formatAmount(amount, assetName) + ' ' + unitName;
 	};
 
-// 更改代码 交易小费单位是MN
+// 更改代码 交易小费单位是MN: Change Code Trade Tips Unit is MN
 
 	var formatFeeStr = function (fee) {
 		if (!fee) return;
-		return fee/1000000 + ' MN';
+		return fee/1000000 + ' DND';
 	};
 
 

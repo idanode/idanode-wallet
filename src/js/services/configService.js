@@ -70,9 +70,11 @@ angular.module('copayApp.services').factory('configService', function (storageSe
     */
     /*for test only*/
 	root.hub = [
-		'192.168.1.127:6616'
+		//'192.168.1.127:6616'
+        '52.15.163.180:6616'
 	]
-	root.stableHub = '192.168.1.127:6616';
+	//root.stableHub = '192.168.1.127:6616';
+    root.stableHub = '52.15.163.180:6616';
     
 	// Wallet default configuration
 	var defaultConfig = {
@@ -100,7 +102,7 @@ angular.module('copayApp.services').factory('configService', function (storageSe
 			reconnectDelay: 5000,
 			idleDurationMin: 4,
 			settings: {
-				unitName: 'MN',
+				unitName: 'DND',
 				unitValue: 1000000,
 				unitDecimals: 6,
 				unitCode: 'mega',
@@ -242,6 +244,8 @@ angular.module('copayApp.services').factory('configService', function (storageSe
 			_config = lodash.clone(defaultConfig);
 			_config.deviceName = defaultConfig.getDeviceName();
 		}
+		//Hoang: Added this to default config
+		_config = defaultConfig;
 		return _config;
 	}
 
