@@ -103,7 +103,9 @@ The release package will be generated under ../idanodebuilds
 ```
 
 ##### Android
-
+Install Cordova
+Install jdk1.8 (9 and higher won't work)
+Install Android SDK (from Android Studio)
 - Install Android SDK （refer to https://developer.android.google.cn/studio/）
 - Run `make android`
 
