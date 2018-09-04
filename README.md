@@ -126,6 +126,8 @@ export PATH=$PATH:/opt/gradle/gradle-4.10/bin
 export ANDROID_HOME=$HOME/your_android_sdk_folder
 export PATH=$PATH:$ANDROID_HOME/tools
 
+You may need to install the build-tool, platform-tools if you encounter the error message like: "No installed build tools found. "
+
 ##### iOS
 
 - Install Xcode 9 (or higher version)
